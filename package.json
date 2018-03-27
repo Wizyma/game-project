@@ -1,0 +1,33 @@
+{
+  "name": "game-project",
+  "version": "1.0.0",
+  "description": "[![js-standard-style](https://cdn.rawgit.com/standard/standard/master/badge.svg)](http://standardjs.com)",
+  "main": "index.js",
+  "scripts": {
+    "precommit": "commitlint -e $GIT_PARAMS",
+    "cm": "git-cz",
+    "all": "npm run precommit && npm run cm"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Wizyma/game-project.git"
+  },
+  "author": "André Gomes",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Wizyma/game-project/issues"
+  },
+  "homepage": "https://github.com/Wizyma/game-project#readme",
+  "devDependencies": {
+    "@commitlint/cli": "^6.1.3",
+    "@commitlint/config-conventional": "^6.1.3",
+    "commitizen": "^2.9.6",
+    "cz-conventional-changelog": "^2.1.0",
+    "husky": "^0.14.3"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}

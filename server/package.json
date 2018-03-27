@@ -4,12 +4,35 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "babel-watch index.js"
   },
   "keywords": [
     "NodeJs",
     "GraphQL"
   ],
   "author": "André Gomes",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-plugin-syntax-dynamic-import": "^6.18.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-watch": "^2.0.7",
+    "eslint": "^4.19.1",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.7.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "morgan": "^1.9.0"
+  },
+  "dependencies": {
+    "dotenv": "^5.0.1",
+    "graphql": "^0.13.2",
+    "graphql-tools": "^2.23.1",
+    "graphql-yoga": "^1.6.1",
+    "igdb-api-node": "^3.1.3"
+  }
 }
