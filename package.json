@@ -4,7 +4,7 @@
   "description": "[![js-standard-style](https://cdn.rawgit.com/standard/standard/master/badge.svg)](http://standardjs.com)",
   "main": "index.js",
   "scripts": {
-    "precommit": "commitlint -e $GIT_PARAMS",
+    "pre-commit": "commitlint -e $GIT_PARAMS --no-verify to bypass",
     "cm": "git-cz",
     "all": "npm run precommit && npm run cm"
   },
