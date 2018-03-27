@@ -31,10 +31,18 @@
             }
         ],
         "key-spacing": "error",
-        "indent": [
+        "react/forbid-prop-types": "off",
+        "react/jsx-indent": [
             "error",
             "tab"
         ],
+        "react/jsx-indent-props": "off",
+        "react/prop-types": "off",
+        "indent": [
+            "warn",
+            "tab"
+        ],
+        "no-tabs": "off",
         "keyword-spacing": "error",
         "lines-around-comment": "error",
         "max-len": [
