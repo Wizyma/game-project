@@ -5,6 +5,7 @@ type schema {
 
 type Query {
     searchGame(name: String!, limit: Int! = 5): [Game!]!
+    popularGames(limit: Int! = 20): [Game!]!
 }
 
 type Game {

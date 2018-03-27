@@ -11,6 +11,19 @@ const resolvers = {
 			})
 
 			return games.body
+		},
+
+		popularGames: async (_, { limit }) => {
+			const games = await client.games({
+				fields: '*',
+				filters: {
+					'popularity-gte': 70
+				},
+				limit,
+				offset: 30
+			})
+
+			return games.body
 		}
 	}
 }
