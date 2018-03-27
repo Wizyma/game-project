@@ -1,0 +1,84 @@
+{
+    "extends": "airbnb",
+    "env": {
+        "browser": true,
+        "commonjs": true,
+        "node": true,
+        "es6": true
+    },
+    "parserOptions": {
+        "ecmaVersion": 6
+    },
+    "rules": {
+        "semi": "off",
+        "react/jsx-filename-extension": "off",
+        "no-trailing-spaces": "off",
+        "no-console": "off",
+        "strict": [
+            "error",
+            "global"
+        ],
+        "curly": "warn",
+        "block-scoped-var": "warn",
+        "default-case": "error",
+        "require-await": "error",
+        "vars-on-top": "error",
+        "func-style": [
+            "error",
+            "declaration",
+            {
+                "allowArrowFunctions": true
+            }
+        ],
+        "key-spacing": "error",
+        "indent": [
+            "error",
+            "tab"
+        ],
+        "keyword-spacing": "error",
+        "lines-around-comment": "error",
+        "max-len": [
+            "error",
+            {
+                "code": 150,
+                "ignoreComments": true,
+                "ignoreUrls": true
+            }
+        ],
+        "no-inline-comments": "error",
+        "no-multi-assign": "warn",
+        "quotes": [
+            "error",
+            "single",
+            {
+                "allowTemplateLiterals": true
+            }
+        ],
+        "require-jsdoc": [
+            "error",
+            {
+                "require": {
+                    "FunctionDeclaration": true,
+                    "MethodDefinition": true,
+                    "ClassDeclaration": false,
+                    "ArrowFunctionExpression": false,
+                    "FunctionExpression": false
+                }
+            }
+        ],
+        "arrow-spacing": "error",
+        "no-var": "error",
+        "prefer-destructuring": [
+            "error",
+            {
+                "array": true,
+                "object": true
+            },
+            {
+                "enforceForRenamedProperties": false
+            }
+        ],
+        "no-unused-vars": "warn",
+        "no-unused-expressions": "warn"
+    }
+}
