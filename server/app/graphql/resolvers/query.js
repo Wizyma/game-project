@@ -1,9 +1,20 @@
+import { client } from '../../api/'
+
 const resolvers = {
-    Query: {
-      hello: (_, { name }) => `Hello ${name || 'World'}`,
-    },
+	Query: {
+		searchGame: async (_, { name, limit }) => {
+			const games = await client.games({
+				fields: '*',
+				limit,
+				offset: 15,
+				search: name
+			})
+
+			return games.body
+		}
+	}
 }
 
 export {
-    resolvers
+	resolvers
 }

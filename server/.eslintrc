@@ -5,6 +5,11 @@
             "error",
             "tab"
         ],
-        "no-tabs": "off"
-    }
+        "no-tabs": "off",
+        "no-mixed-spaces-and-tabs": "off"
+    },
+    "plugins": [
+        "class-property"
+    ],
+    "parser": "babel-eslint"
 }
