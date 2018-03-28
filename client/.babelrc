@@ -5,6 +5,15 @@
         "stage-2"
     ],
     "plugins": [
-        "transform-class-properties"
+        "transform-class-properties",
+        "transform-object-rest-spread",
+        [
+            "transform-runtime", {
+                "helpers": false,
+                "polyfill": true,
+                "regenerator": true,
+                "moduleName": "babel-runtime"
+            }
+        ]
     ]
 }

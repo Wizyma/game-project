@@ -8,6 +8,15 @@ import App from './src/app'
 
 const client = new ApolloClient({
   uri: 'http://localhost:4000/graphql',
+  onError: (obj) => {
+    console.log(obj)
+  },
+  clientState: {
+    defaults: {
+      search: null,
+      game: null,
+    },
+  },
   cacheRedirects: new InMemoryCache(),
 })
 

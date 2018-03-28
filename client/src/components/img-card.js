@@ -31,7 +31,6 @@ const ImgCard = ({ cloudinary_id, classes }) => (
         <CardMedia
           className={classes.media}
           image={cloudinaryImg}
-          title="Contemplative Reptile"
         />
       )
     }}
@@ -42,7 +41,6 @@ const WithoutId = ({ classes }) => (
   <CardMedia
     className={classes.media}
     image="https://cdn.browshot.com/static/images/not-found.png"
-    title="Contemplative Reptile"
   />
 )
 
