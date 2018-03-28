@@ -42,6 +42,8 @@
             "warn",
             2
         ],
+        "camelcase": "off",
+        "object-curly-newline": "off",
         "no-tabs": "off",
         "keyword-spacing": "error",
         "lines-around-comment": "error",

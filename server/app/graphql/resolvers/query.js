@@ -17,13 +17,21 @@ const resolvers = {
 			const games = await client.games({
 				fields: '*',
 				filters: {
-					'popularity-gte': 70
+					'popularity-gt': 80
 				},
 				limit,
 				offset: 30
 			})
 
 			return games.body
+		},
+
+		cloudinaryImg: async (_, { id }) => {
+			const img = await client.image({
+				cloudinary_id: id
+			}, 'cover_big')
+
+			return img
 		}
 	}
 }
