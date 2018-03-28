@@ -34,13 +34,13 @@
         "react/forbid-prop-types": "off",
         "react/jsx-indent": [
             "error",
-            "tab"
+            2
         ],
         "react/jsx-indent-props": "off",
         "react/prop-types": "off",
         "indent": [
             "warn",
-            "tab"
+            2
         ],
         "no-tabs": "off",
         "keyword-spacing": "error",

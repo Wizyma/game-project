@@ -7,8 +7,8 @@ import { render } from 'react-dom'
 import App from './src/app'
 
 const client = new ApolloClient({
-	uri: 'http://localhost:4000/graphql',
-	cacheRedirects: new InMemoryCache(),
+  uri: 'http://localhost:4000/graphql',
+  cacheRedirects: new InMemoryCache(),
 })
 
 /* eslint-disable */
