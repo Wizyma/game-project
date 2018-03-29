@@ -13,7 +13,7 @@ const GET_POPULAR = gql`
             name
             id
             summary
-			cover {
+			      cover {
               cloudinary_id
             }
         }

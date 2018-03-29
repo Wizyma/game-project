@@ -8,6 +8,7 @@ type schema {
 type Query {
     searchGame(name: String!, limit: Int! = 5): [Game!]!
     popularGames(limit: Int! = 20): [Game!]!
+    searchGameById(id: ID!): Game!
     cloudinaryImg(id: String!): IMG!
 }
 
@@ -56,6 +57,11 @@ type Game {
     esrb: ESRB
     pegi: PEGI
     websites: [Websites]
+    external: External
+}
+
+type External {
+    steam: Int!
 }
 
 type Websites {

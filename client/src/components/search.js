@@ -30,7 +30,6 @@ const styles = {
   },
 }
 
-/* eslint-disable */
 class Search extends Component {
   constructor() {
     super()
@@ -41,10 +40,10 @@ class Search extends Component {
   }
 
   shouldComponentUpdate(nProps, nState) {
-      if(this.state.name !== nState.name){
-          return true
-      }
-      return false
+    if (this.state.name !== nState.name) {
+      return true
+    }
+    return false
   }
 
   render() {
@@ -53,41 +52,41 @@ class Search extends Component {
 
     return (
       <ApolloConsumer>
-        { cache => {
+        { (cache) => {
           cache.cache.watch({ query: gql`query search{ search @client}`,
-              callback: ({ result }) => {
-                  const { search } = result
-                  this.setState({ name: search })
-              } 
-            })
-            if(name) {
-                return(
-                    <Query query={SEARCH_GAME} variables={{ name, limit: 12 }}>
-                      {({ loading, error, data }) => {
-                        if (loading) return <Loading />
-                        if (error) return `Error!: ${error}`
+            callback: ({ result }) => {
+              const { search } = result
+              this.setState({ name: search })
+            }, 
+          })
+          if (name) {
+            return (
+              <Query query={SEARCH_GAME} variables={{ name, limit: 12 }}>
+                {({ loading, error, data }) => {
+                  if (loading) return <Loading />
+                  if (error) return `Error!: ${error}`
       
-                        const { searchGame } = data
-                        if(searchGame.length >= 1) {
-                            return(
-                                <Fragment>
-                                        <Typography component="h2" className={classes.primaryTitle}>
-                                            Research Results
-                                        </Typography>
-                                    <Games games={searchGame} />
-                                </Fragment>
-                            )
-                        }
-                        return (
-                            <Typography component="h2" className={classes.primaryTitle}>
-                                No data found
-                            </Typography>
-                        )
-                      }}
-                    </Query>
-                )
-            }
-            return null
+                  const { searchGame } = data
+                  if (searchGame.length >= 1) {
+                    return (
+                      <Fragment>
+                        <Typography component="h2" className={classes.primaryTitle}>
+                            Research Results
+                        </Typography>
+                        <Games games={searchGame} />
+                      </Fragment>
+                    )
+                  }
+                  return (
+                    <Typography component="h2" className={classes.primaryTitle}>
+                        No data found
+                    </Typography>
+                  )
+                }}
+              </Query>
+            )
+          }
+          return null
         }}
       </ApolloConsumer>
     )

@@ -5,6 +5,7 @@ import Card, { CardActions, CardContent } from 'material-ui/Card'
 import Button from 'material-ui/Button'
 import Typography from 'material-ui/Typography'
 import Grid from 'material-ui/Grid'
+import { Link } from 'react-router-dom'
 import { ImgWithId, ImgWithoutId } from './img-card'
 
 
@@ -34,6 +35,10 @@ const styles = {
     'text-align': 'center',
     'font-size': 40,
   },
+  linkStyle: {
+    color: 'inherit',
+    'text-decoration': 'none',
+  },
 }
 
 const Games = ({ games, classes }) => (
@@ -57,7 +62,7 @@ const Games = ({ games, classes }) => (
                         Share
                 </Button>
                 <Button size="small" color="primary">
-                        Learn More
+                  <Link className={classes.linkStyle} to={{ pathname: '/more', search: `id=${id}` }}>Learn More</Link>
                 </Button>
               </CardActions>
             </Card>

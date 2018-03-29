@@ -3,7 +3,6 @@ import { client } from '../../api/'
 const resolvers = {
 	Query: {
 		searchGame: async (_, { name, limit }) => {
-			console.log(name)
 			const games = await client.games({
 				fields: '*',
 				limit,
@@ -22,7 +21,7 @@ const resolvers = {
 					'popularity-gt': 80
 				},
 				limit,
-				offset: 30,
+				offset: 0,
 				order: 'rating:desc'
 			})
 
@@ -35,6 +34,19 @@ const resolvers = {
 			}, 'cover_big')
 
 			return img
+		},
+
+		searchGameById: async (_, { id }) => {
+			const game = await client.games({
+				fields: '*',
+				offset: 0,
+				order: 'release_dates.date:desc',
+				ids: [
+					id
+				]
+			})
+
+			return game.body[0]
 		}
 	}
 }

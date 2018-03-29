@@ -64,18 +64,7 @@
                 "allowTemplateLiterals": true
             }
         ],
-        "require-jsdoc": [
-            "warn",
-            {
-                "require": {
-                    "FunctionDeclaration": true,
-                    "MethodDefinition": true,
-                    "ClassDeclaration": false,
-                    "ArrowFunctionExpression": false,
-                    "FunctionExpression": false
-                }
-            }
-        ],
+        "jsx-a11y/anchor-is-valid": "off",
         "arrow-spacing": "error",
         "no-var": "error",
         "prefer-destructuring": [
