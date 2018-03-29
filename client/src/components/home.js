@@ -1,12 +1,12 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import Popular from './popular'
 import Search from './search'
 
 const Home = () => (
-  <div>
+  <Fragment>
     <Popular />
     <Search />
-  </div>
+  </Fragment>
 )
 
 export default Home

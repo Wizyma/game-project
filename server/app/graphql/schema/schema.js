@@ -43,6 +43,7 @@ type Game {
     player_perspectives: [Int]
     game_modes: [Int]
     themes: [Int]
+    status: Int
     genres: [Int]
     expansions: [Int]
     dlcs: [Int]
