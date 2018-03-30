@@ -7,16 +7,35 @@ import { withStyles } from 'material-ui/styles'
 import Loading from './loading'
 
 const GET_MORE_INFO = gql`
-    query gameById($id: ID!){
-        searchGameById(id: $id){
-            name
-            id
-            summary
-			cover {
-              cloudinary_id
-            }
-        }
+query gameById($id: ID!) {
+  searchGameById(id: $id) {
+      name
+      id
+      storyline
+      cover {
+        cloudinary_id
+      }
+      pegi {
+        rating
+      }
+      websites {
+        category
+        url
+      }
+      rating
+      aggregated_rating
+      reviews {
+        game
+        content
+        positive_points
+        negative_points
+      }
+      videos {
+        name
+        video_id
+      }
     }
+  }
 `
 
 const styles = theme => ({
