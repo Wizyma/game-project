@@ -32,7 +32,9 @@ type Game {
     keywords: [Int]
     storyline: String
     hypes: Int
-    rating: Int
+    # Users Rating
+    rating: Float
+    # Critics Rating
     aggregated_rating: Float
     aggregated_rating_count: Int
     total_rating: Float
@@ -43,6 +45,7 @@ type Game {
     player_perspectives: [Int]
     game_modes: [Int]
     themes: [Int]
+    status: Int
     genres: [Int]
     expansions: [Int]
     dlcs: [Int]
@@ -58,6 +61,51 @@ type Game {
     pegi: PEGI
     websites: [Websites]
     external: External
+    reviews: [Reviews]
+    credits: [Credits]
+}
+
+type Credits {
+    id: ID!
+    name: String
+    slug: String
+    url: String!
+    created_at: Int
+    updated_at: Int
+    game: ID!
+    category: Int
+    company: ID
+    position: Int
+    person: Int
+    character: Int
+    person_title: ID
+    country: Int
+    credited_name: String
+    character_credited_name: String
+}
+
+type Reviews {
+    id: ID! 
+    username: String!
+    slug: String!
+    title: String!
+    url: String!
+    created_at: Int!
+    updated_at: Int
+    # ID of a game record
+    game: ID!
+    category: Int!
+    likes: Int!
+    views: Int!
+    rating_category: Int!
+    platform: Int
+    # Youtube video slug
+    video: String
+    introduction: String
+    content: String!
+    conclusion: String
+    positive_points: String
+    negative_points: String
 }
 
 type External {
